@@ -1,4 +1,4 @@
-_base_ = './base_voc12.py'
+_base_ = './base.py'
 # model settings
 model = dict(
     type='WeakRCNN',
@@ -19,4 +19,4 @@ model = dict(
             roi_feat_size=7,
             num_classes=20))
 ) 
-work_dir = '/home/junweizhou/WeakSAM/WSOD2/work_dirs/oicr_voc07_adj'
+work_dir = 'WeakSAM/baselines/WSOD2/work_dirs/oicr_voc07'
