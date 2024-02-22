@@ -8,17 +8,16 @@ from pathlib import Path
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--cat-pickle-list', default= ['trainaug-grid32.pkl', 'coarse/k17_t90.pkl', 'fine/k17_t90.pkl', 'cross/k129_t90.pkl'], type=list
+    parser.add_argument('--cat-pickle-list', default= ['trainval-grid32.pkl', 'coarse/k17_t90.pkl', 'fine/k17_t90.pkl', 'cross/k129_t90.pkl'], type=list
                         , help='receiving a list of pickle format files to be concatenated.')
-    parser.add_argument('--pickle-path', default='/home/junweizhou/MCTformer/MCTformer_results/proposals', help='path to the pickle files for concatenation.')
-    parser.add_argument('--storage-path', default='/home/junweizhou/MCTformer/MCTformer_results/proposals', help='the path for the storage of output pickle file.')
-    parser.add_argument('--file-name', default='mct_trainval_99.pkl')
+    parser.add_argument('--pickle-path', default='./peak_proposals/VOC07/', help='path to the pickle files for concatenation.')
+    parser.add_argument('--storage-path', default='./peak_proposals/VOC07/', help='the path for the storage of output pickle file.')
+    parser.add_argument('--file-name', default='voc07trainval.pkl')
     parser.add_argument('--istest', default=False)
-    # , 'trainval_proposals_grid32_xyxy_VOC.pkl'
+
     args = parser.parse_args()
     
     pkl_list = args.cat_pickle_list
-    pkl_list = ['trainval-grid32.pkl','normal_cam_trainval.pkl', 'cross_mct_trainval1.pkl']
     assert isinstance(pkl_list, list), 'The provided pickle list should be a list type.'
     path_pkl = args.pickle_path
     path_storage = args.storage_path
