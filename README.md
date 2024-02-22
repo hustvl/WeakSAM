@@ -70,12 +70,12 @@ For WSIS task:
 
 
 
-## 4. Data & Preliminaries
+## Data & Preliminaries
 
 - [Installing](docs/install.md)
 - [Data preparation](docs/data_preparation.md)
 
-## 5. Generation & Training pipelines
+## Generation & Training pipelines
 
 - [Generation Pipeline](https://github.com/Colezwhy/WeakSAM/blob/master/docs/generation.md)
 - [WeakSAM-WSOD Pipeline](docs/training_wsod.md)
