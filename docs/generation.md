@@ -114,7 +114,9 @@ python clustering_generation.py --image-set voc07/trainval.txt \
 
 #### Or use the scripts for convenience
 ```bash
-# The above commands are integrated in this script.
+# The above commands are integrated in this script. Note that the data paths in the following script should be changed according to your own environment.
+
+cd WeakSAM/roi_generation/WeakTr
 bash ./extraction_scripts/extract_voc07.sh
 
 ```
