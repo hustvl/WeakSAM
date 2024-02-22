@@ -241,10 +241,10 @@ def single_process(p):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # dataset reading options
-    parser.add_argument('--txt-folder-path', default='/home/junweizhou/WeakTr/WeakTr/weaktr_results/VOC07-peak/', type=str)
-    parser.add_argument('--ori-image-path', default='/home/junweizhou/WeakTr/WeakTr/data/voc07/VOCdevkit/VOC2007/JPEGImages/', type=str)
-    # parser.add_argument('--img-set-path', default='/home/junweizhou/Datasets/VOC/VOC2012/ImageSets/Segmentation/train.txt')
-    parser.add_argument('--img-set-path', default='/home/junweizhou/WeakTr/WeakTr/voc07/test.txt')
+    parser.add_argument('--txt-folder-path', default='./WeakTr/WeakTr/weaktr_results/VOC07-peak/', type=str)
+    parser.add_argument('--ori-image-path', default='./WeakTr/WeakTr/data/voc07/VOCdevkit/VOC2007/JPEGImages/', type=str)
+    # parser.add_argument('--img-set-path', default='./Datasets/VOC/VOC2012/ImageSets/Segmentation/train.txt')
+    parser.add_argument('--img-set-path', default='./WeakTr/WeakTr/voc07/test.txt')
 
     # mask generation options(obligatory storage)
     parser.add_argument('--mask-type', default=True, type=str)
@@ -252,7 +252,7 @@ if __name__ == '__main__':
     parser.add_argument('--point-input-type', default='mixture', help='Whether to use one point or '
                                                                     'a batch for inference in one time.'
                                                                     '(options: single, batch, mixture)')
-    parser.add_argument('--proposal-storage-path', default='/home/junweizhou/WeakSAM/segment-anything/peak_proposal/VOC07/pam-k33', help='for the storage of proposals.')
+    parser.add_argument('--proposal-storage-path', default='./WeakSAM/segment-anything/peak_proposal/VOC07/pam-k33', help='for the storage of proposals.')
     parser.add_argument('--proposal-name', default='k33_test.pkl')
     parser.add_argument('--device', default=None, type=int)
     parser.add_argument('--starting-layer', default=1, type=int)
