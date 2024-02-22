@@ -171,6 +171,9 @@ python ./scripts/proposal_generator.py --source-path './COCO14/train' \
 # For more layers, adjusting the starting layer and ending layer.
 
 # Prompting using FineCAM points
+
+cd WeakSAM/roi_generation/segment-anything/segment_anything/utils
+
 python pooled_proposal_generation.py --img-set-path {your_path}/WeakSAM/data/voc/VOC2007/ImageSets/Main/trainval.txt \
 --peakfile-name coarse/peak-pam-k17-t90/ \
 --txt-folder-path {your_path}/WeakSAM/roi_generation/WeakTr/weaktr_results/VOC07-peak \
@@ -231,6 +234,7 @@ python proposal_concatenation.py --pickle-path ./peak_proposal/VOC07/ \
 ```bash
 # All integrated in one script.
 
+cd WeakSAM/roi_generation
 bash generation_voc07.sh
 
 ```
