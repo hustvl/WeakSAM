@@ -1,6 +1,6 @@
 <div align="center">
 <h1>WeakSAM </h1>
-<h3>Exploring Classification Clues as SAM Prompts for Weakly-supervised Object Detection and Instance Segmentation</h3>
+<h3>Segment Anything Meets Weakly-supervised Instance-level Recognition</h3>
 
 [Lianghui Zhu](https://github.com/Unrealluver)<sup>1</sup> \*,[Junwei Zhou](https://github.com/Colezwhy)<sup>1</sup> \*,Yan Liu<sup>2</sup>, Xin Hao<sup>2</sup>, [Wenyu Liu](http://eic.hust.edu.cn/professor/liuwenyu/)<sup>1</sup>, [Xinggang Wang](https://xwcv.github.io/)<sup>1 :email:</sup>
 
@@ -34,7 +34,7 @@ Weakly supervised visual recognition using inexact supervision is a critical yet
 We first introduce classification clues and spatial points as automatic SAM prompts, which address the problem of SAM requiring interactive prompts. Next, we use the WeakSAM-proposals in the WSOD pipeline, in which the weakly-supervised detector performs class-aware perception to annotate pseudo ground truth (PGT). Then, we analyze the incompleteness and noise problem existing in PGT and propose adaptive PGT generation, RoI drop regularization to address them, respectively. Finally, we use WeakSAM-PGT to prompt SAM for WSIS extension. (The snowflake mark means the model is frozen.)
 
 <p align="middle">
-<img src="sources/weaksam_pipeline_v2.3.png" alt="WeakSAM pipeline" width="1200px">
+<img src="sources/weaksam_pipeline_v2.5.png" alt="WeakSAM pipeline" width="1200px">
 </p>
 
 
