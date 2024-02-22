@@ -1,0 +1,25 @@
+_BASE_: "../Base-RCNN-C4.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 50
+  RPN:
+    IN_FEATURES: ["res5"]
+    PRE_NMS_TOPK_TEST: 6000
+    POST_NMS_TOPK_TEST: 1000
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    BATCH_SIZE_PER_IMAGE: 4096
+    POSITIVE_FRACTION: 1.0
+    PROPOSAL_APPEND_GT: False
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval', 'voc_2012_trainval')
+  TEST: ('voc_2012_test',)
+SOLVER:
+  STEPS: (12000, 16000)
+  MAX_ITER: 18000  # 17.4 epochs
+  WARMUP_ITERS: 100

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/junweizhou/WeakTr/WeakTr/OnlineRetraining/mlruns/0/f08c1027556e4501a335dd41c768d598/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f08c1027556e4501a335dd41c768d598
+run_name: start1.2_patch120_seg_deit_small_patch16_224_voc_weaktr
+run_uuid: f08c1027556e4501a335dd41c768d598
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685264260224
+status: 1
+tags: []
+user_id: junweizhou

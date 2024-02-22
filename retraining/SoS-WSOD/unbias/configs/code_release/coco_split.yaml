@@ -1,0 +1,49 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  META_ARCHITECTURE: "TwoStagePseudoLabGeneralizedRCNN"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+  PROPOSAL_GENERATOR:
+    NAME: "PseudoLabRPN"
+  RPN:
+    POSITIVE_FRACTION: 1.0
+    LOSS: "CrossEntropy"
+    BBOX_REG_LOSS_TYPE: "smooth_l1_mean"
+  ROI_HEADS:
+    NAME: "StandardROIHeadsPseudoLab"
+    LOSS: "CrossEntropy"
+    POSITIVE_FRACTION: 1.0
+  ROI_BOX_HEAD:
+    BBOX_REG_LOSS_TYPE: "smooth_l1_mean"
+SOLVER:
+  LR_SCHEDULER_NAME: "WarmupMultiStepLR"
+  STEPS: (30000, 40000)
+  MAX_ITER: 90000
+  IMG_PER_BATCH_LABEL: 16
+  IMG_PER_BATCH_UNLABEL: 16
+  BASE_LR: 0.02
+DATALOADER:
+  SUP_PERCENT: 99.9991202372
+  RANDOM_DATA_SEED: 1
+  RANDOM_DATA_SEED_PATH: "./dataseed/coco_baseline.txt"
+DATASETS:
+  CROSS_DATASET: False
+  TRAIN: ("coco_2014_pseudo_train",)
+  TEST: ("coco_2014_minival",)
+  # TEST: ("coco_2014_train", "coco_2014_valminusminival", "coco_2014_minival",)
+SEMISUPNET:
+  Trainer: "ubteacher"
+  BBOX_THRESHOLD: 0.7
+  TEACHER_UPDATE_ITER: 1
+  BURN_UP_STEP: 90000
+  EMA_KEEP_RATE: 0.9996
+  UNSUP_LOSS_WEIGHT: 4.0
+  EVAL_TEACHER: False
+  BURN_UP_WITH_STRONG_AUG: False
+TEST:
+  EVAL_PERIOD: 1000
+  EVALUATOR: "COCOeval"
+OUTPUT_DIR: "./output/coco_test/"

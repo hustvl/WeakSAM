@@ -1,0 +1,59 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHT: "catalog://VGGImageNetPretrained/JCJOHNS/VGG-16" 
+  BACKBONE:
+    CONV_BODY: "VGG16-OICR"
+  WSOD_ON: True
+  FASTER_RCNN: False
+  ROI_HEADS:
+    SCORE_THRESH: 0.0
+    NMS: 0.3
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 21
+    POOLER_METHOD: "ROIPool"
+    POOLER_RESOLUTION: 7
+    POOLER_SCALES: (0.125,)
+    FEATURE_EXTRACTOR: "VGG16.roi_head"
+  ROI_WEAK_HEAD:
+    PREDICTOR: "MISTPredictor"
+    LOSS: "RoIRegLoss"
+    OICR_P: 0.15
+    REGRESS_ON: True
+DB:
+  METHOD: 'concrete'
+DATASETS:
+  TRAIN: ("voc_2012_train", 'voc_2012_val')
+  TEST: ("voc_2012_test",)
+PROPOSAL_FILES:
+  TRAIN: ('proposal/SAM/VOC12/SS-voc_2012_train-boxes.pkl', 'proposal/SAM/VOC12/SS-voc_2012_val-boxes.pkl')
+  TEST:  ('proposal/SAM/VOC12/SS-voc_2012_test-boxes.pkl',)  # changed
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+INPUT:
+  MIN_SIZE_TRAIN: (480, 576, 688, 864, 1000, 1200) 
+  MAX_SIZE_TRAIN: 2000
+  MIN_SIZE_TEST: 800
+  MAX_SIZE_TEST: 2000
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.00001
+  WEIGHT_DECAY: 0.0005
+  WARMUP_ITERS: 200
+  STEPS: (40000, 53400)
+  # For Adam the same iteration changing.
+  MAX_ITER: 64000
+  CHECKPOINT_PERIOD: 4000
+SOLVER_CDB:
+  BASE_LR: 0.00001
+  GAMMA: 3.0
+  WEIGHT_DECAY: 0.0005
+  STEPS: (40000, 53400)
+TEST:
+  BBOX_AUG:
+    ENABLED: True
+    HEUR: "AVG"
+    H_FLIP: True
+    SCALES: (480, 576, 688, 864, 1000, 1200) 
+    MAX_SIZE: 2000
+    SCALE_H_FLIP: True
+SEED: 1

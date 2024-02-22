@@ -1,0 +1,38 @@
+_BASE_: "../Base-RCNN-FPN-COCO14.yaml"
+MODEL:
+  INSTANCE_DROP: 
+    ISON: True
+    THRESH_CLS: 5.0
+    THRESH_REG: 4.0
+    OPERATE_ITER: 10000
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 50
+TEST:
+  AUG:
+    ENABLED: True
+    MIN_SIZES: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800, 832, 864, 896, 928, 960, 992, 1024, 1056, 1088, 1120, 1152, 1184, 1216)
+    MAX_SIZE: 4000
+    FLIP: True
+  EVAL_PERIOD: 2000
+DATASETS:
+  TRAIN: ("coco_2014_pseudo_train",) # coco_2014_pseudo_norm_train  coco_2014_pseudo_train
+  TEST: ("coco_2014_minival",)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.02
+  STEPS: (55000, 75000)  # 60000, 80000
+  MAX_ITER: 85000
+  CHECKPOINT_PERIOD: 5000
+# INPUT:
+#   MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800, 832, 864, 896, 928, 960, 992, 1024, 1056, 1088, 1120, 1152, 1184, 1216)
+#   MAX_SIZE_TRAIN: 2000
+#   MIN_SIZE_TEST: 688
+#   MAX_SIZE_TEST: 4000
+OUTPUT_DIR: "WeakSAM/SoS-WSOD/coco_retrain"
+
+
+
+ 
+
