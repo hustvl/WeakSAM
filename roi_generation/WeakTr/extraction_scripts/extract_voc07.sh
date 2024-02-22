@@ -53,6 +53,11 @@ python main.py --model deit_small_WeakTr_patch16_224 \
 --kernel 129 \
 --t 90 \
 
+python clustering_generation.py --image-set voc07/trainval.txt \
+--image-path {your_path}/WeakSAM/data/voc/VOC2007/JPEGImages \
+--point-path ./weaktr_results/VOC07-peak/cross/peak-pam-k129-t90 \
+--peakfile ./weaktr_results/VOC07-peak/cross/peak-pam-k129-t90-1
+
 #--------------------------------trainval set generation --------------------------------#
 
 python main.py --model deit_small_WeakTr_patch16_224 \
