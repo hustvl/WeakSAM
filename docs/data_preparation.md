@@ -45,6 +45,12 @@ WeakTr(DeiT-S) for coco dataset : [DeiT-S COCO](https://drive.google.com/file/d/
 ### Ⅲ Downloading pretrained VGG16 for WSOD2
 
 # download vgg16 imagenet pre-trained weights
+
+```bash
 cd WeakSAM/baselines/WSOD2
+
 mkdir -p pretrain
+
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10Vh2qFmGucO-9DZ3eY3HAvcAmtPFcFg2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10Vh2qFmGucO-9DZ3eY3HAvcAmtPFcFg2" -O pretrain/vgg16.pth && rm -rf /tmp/cookies.txt
+
+```
