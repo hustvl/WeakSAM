@@ -8,7 +8,7 @@
 
 (\*) equal contribution, (<sup>:email:</sup>) corresponding author.
 
-ArXiv Preprint ([arXiv to.do](https://arxiv.org/abs/to.do))
+ArXiv Preprint ([arXiv 2402.14812](https://arxiv.org/abs/2402.14812))
 
 </div>
 
@@ -16,7 +16,7 @@ ArXiv Preprint ([arXiv to.do](https://arxiv.org/abs/to.do))
 
 ### News
 
-* **` Feb. 22nd, 2024`:** We released our paper on Arxiv. Further details can be found in code and our updated [arXiv](https://arxiv.org/abs/to.do).
+* **` Feb. 22nd, 2024`:** We released our paper on Arxiv. Further details can be found in code and our updated [arXiv](https://arxiv.org/abs/2402.14812).
 
 
 ## Abstract
@@ -85,7 +85,14 @@ For WSIS task:
 ## Citation
 If you find this repository/work helpful in your research, welcome to cite the paper and give a ⭐.
 ```
-to.do
+@article{zhu2024weaksam,
+      title={WeakSAM: Segment Anything Meets Weakly-supervised Instance-level Recognition}, 
+      author={Lianghui Zhu and Junwei Zhou and Yan Liu and Xin Hao and Wenyu Liu and Xinggang Wang},
+      year={2024},
+      eprint={2402.14812},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 ## Acknowledgement
