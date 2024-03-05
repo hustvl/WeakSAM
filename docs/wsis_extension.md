@@ -1,6 +1,6 @@
 ### Performing WSIS extension.
-The extension part is based on Mask2Former codebase and please refer to [Mask2Former](https://github.com/facebookresearch/Mask2Former) for implementation details.
-Make a soft link to avoid repetitive download of datasets.
+The extension part is based on Mask2Former codebase and please refer to [Mask2Former](https://github.com/facebookresearch/Mask2Former) for implementation details. Note that you might need to install detectron2 following the Mask2Former repo and implement WSIS task.
+Also, make a soft link to avoid repetitive download of datasets.
 
 The generated WSIS dataset are listed below.
 |  Dataset | MIST PGT |

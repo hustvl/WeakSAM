@@ -58,4 +58,3 @@ draw_mask_pgt.py
 test_voc_cim_draw_gpt.py
 test_voc_cim_draw.py
 test_voc_gt_draw.py
-/data/junweizhou/WeakSAM/wsis/Mask2Former/detectron2/detectron2.egg-info
