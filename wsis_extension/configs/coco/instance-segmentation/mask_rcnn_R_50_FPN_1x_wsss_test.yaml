@@ -1,0 +1,9 @@
+_BASE_: "../Base-COCO-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+DATASETS:
+  TRAIN: ("coco_2017_train_wsss",)
+  TEST: ("coco_2017_test-dev",)

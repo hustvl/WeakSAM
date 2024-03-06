@@ -1,0 +1,9 @@
+_BASE_: "../Base-COCO-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  STEPS: (655556, 710184)
+  MAX_ITER: 717500

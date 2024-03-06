@@ -1,0 +1,12 @@
+_BASE_: "../Base-voc12-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  STEPS: (29395, 31844)
+  MAX_ITER: 33069
+  CHECKPOINT_PERIOD: 5000
+TEST:
+  EVAL_PERIOD: 5000

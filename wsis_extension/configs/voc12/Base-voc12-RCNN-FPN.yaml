@@ -1,0 +1,10 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  ROI_HEADS:
+    NUM_CLASSES: 20
+DATASETS:
+  TRAIN: ("voc12_train_aug_coco_wsss",)
+  TEST: ("voc12_val_coco",)
+SOLVER:
+  STEPS: (6000, 8000)
+  MAX_ITER: 9000

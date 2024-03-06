@@ -46,9 +46,10 @@ _darcs
 
 # project dirs
 /detectron2/model_zoo/configs
-/datasets/*
-!/datasets/*.*
-/projects/*/datasets
+# /datasets/*
+# !/datasets/*.*
+# !/wsis_extension/maskrcnn/data/datasets/*
+# /projects/*/datasets
 /models
 /snippet
 cim-visualization
