@@ -75,7 +75,7 @@ For WSIS task:
 
 ## Generation & Training pipelines
 
-- [Generation Pipeline](https://github.com/Colezwhy/WeakSAM/blob/master/docs/generation.md)
+- [Generation Pipeline](docs/generation.md)
 - [WeakSAM-WSOD Pipeline](docs/training_wsod.md)
 - [WeakSAM-WSIS Pipeline](docs/wsis_extension.md)
 
