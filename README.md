@@ -34,7 +34,7 @@ Weakly supervised visual recognition using inexact supervision is a critical yet
 We first introduce classification clues and spatial points as automatic SAM prompts, which address the problem of SAM requiring interactive prompts. Next, we use the WeakSAM-proposals in the WSOD pipeline, in which the weakly-supervised detector performs class-aware perception to annotate pseudo ground truth (PGT). Then, we analyze the incompleteness and noise problem existing in PGT and propose adaptive PGT generation, RoI drop regularization to address them, respectively. Finally, we use WeakSAM-PGT to prompt SAM for WSIS extension. (The snowflake mark means the model is frozen.)
 
 <p align="middle">
-<img src="sources/weaksam_pipeline_v4.0.png" alt="WeakSAM pipeline" width="1200px">
+<img src="sources/weaksam_pipeline_v4.0_1.png" alt="WeakSAM pipeline" width="1200px">
 </p>
 
 
