@@ -8,7 +8,7 @@
 
 (\*) equal contribution, (<sup>:email:</sup>) corresponding author.
 
-ArXiv Preprint ([arXiv 2402.14812](https://arxiv.org/abs/2402.14812)) Project Page([weaksam project page](https://colezwhy.github.io/weaksam))
+ArXiv Preprint ([arXiv 2402.14812](https://arxiv.org/abs/2402.14812)), Project Page([weaksam project page](https://colezwhy.github.io/weaksam))
 
 </div>
 
