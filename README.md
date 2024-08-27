@@ -13,6 +13,12 @@ ArXiv Preprint ([arXiv 2402.14812](https://arxiv.org/abs/2402.14812)), Project P
 </div>
 
 #
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/image-level-supervised-instance-segmentation-2)](https://paperswithcode.com/sota/image-level-supervised-instance-segmentation-2?p=weaksam-segment-anything-meets-weakly)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/image-level-supervised-instance-segmentation-1)](https://paperswithcode.com/sota/image-level-supervised-instance-segmentation-1?p=weaksam-segment-anything-meets-weakly)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/weakly-supervised-object-detection-on-ms-coco)](https://paperswithcode.com/sota/weakly-supervised-object-detection-on-ms-coco?p=weaksam-segment-anything-meets-weakly)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/weakly-supervised-object-detection-on-pascal-1)](https://paperswithcode.com/sota/weakly-supervised-object-detection-on-pascal-1?p=weaksam-segment-anything-meets-weakly)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/weakly-supervised-object-detection-on-pascal)](https://paperswithcode.com/sota/weakly-supervised-object-detection-on-pascal?p=weaksam-segment-anything-meets-weakly)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/weaksam-segment-anything-meets-weakly/image-level-supervised-instance-segmentation)](https://paperswithcode.com/sota/image-level-supervised-instance-segmentation?p=weaksam-segment-anything-meets-weakly)
 
 ### News
 
