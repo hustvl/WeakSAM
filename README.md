@@ -90,12 +90,10 @@ For WSIS task:
 If you find this repository/work helpful in your research, welcome to cite the paper and give a ⭐.
 ```
 @article{zhu2024weaksam,
-      title={WeakSAM: Segment Anything Meets Weakly-supervised Instance-level Recognition}, 
-      author={Lianghui Zhu and Junwei Zhou and Yan Liu and Xin Hao and Wenyu Liu and Xinggang Wang},
-      year={2024},
-      eprint={2402.14812},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+  title={WeakSAM: Segment Anything Meets Weakly-supervised Instance-level Recognition},
+  author={Zhu, Lianghui and Zhou, Junwei and Liu, Yan and Hao, Xin and Liu, Wenyu and Wang, Xinggang},
+  journal={Proceedings of the 32nd ACM International Conference on Multimedia},
+  year={2024}
 }
 ```
 
